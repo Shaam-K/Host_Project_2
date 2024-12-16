@@ -1,0 +1,265 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: visible;
+}
+
+
+.nav_bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    background: none;
+    font-family: "Cabin", serif;
+    z-index: 1000;
+    transition: 0.3s all ease-out
+}
+
+.menu_items.m2 ul {
+    display: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.nav_bar.hidden {
+    display: none;
+}
+
+
+.nav_bar.sticking {
+    background: black; /* Add a background to prevent content underneath from showing */
+    width: 100%;
+}
+
+.nav_contain img {
+    width: 200px;
+}
+
+.nav_contain {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 0.78em;
+    font-weight: 700;
+    gap: 6%
+}
+
+.nav_contain ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.nav_links {
+    display: flex;
+    width: 70%;
+    gap: 5%;
+}
+
+.menu {
+    margin-top: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    right: 0;
+    gap: 30px;
+    height: 20vh;
+    padding:30px;
+    width: 15vw;
+}
+
+#menu_items {
+    position: absolute;
+    height: 100vh;
+    width: 15vw;
+    background: black;
+    right: 0;
+}
+
+#menu_items ul {
+    display: flex;
+    font-size: 1.25em;
+    gap:30px;
+    padding: 30px;
+    flex-direction: column;
+    text-align: right;
+    list-style-type: none;
+}
+
+#menu_items ul li {
+    border-bottom: 1px solid rgb(46, 46, 46);
+    padding-bottom: 7px;
+}
+
+.style_screen {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.style_screen.style_screen_1 {
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_06_Launch_Snchz_Tracking_20241119_DSC_05744_website_H_61b601fd9d.jpg);
+}
+
+.style_screen.style_screen_2 {
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Starlink_G12_5_STREAK_DESKTOP_2_f671587b0d.jpg);
+}
+
+.style_screen.style_screen_3 {
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Sirius_XM_9_LIFTOFF_REMOTE_INSIDE_PAD_ENGINE_H_FS_desktop_069b9cb320.jpg);
+}
+
+.style_screen.style_screen_4 {
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Eva_Suit_Desktop_alternate_1cf9bae18e.jpg);
+}
+
+
+.style_screen.style_screen_5 {
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/make_life_multiplanetary_desktop_3fa7cff73c.jpg);
+}
+
+
+.screen_content {
+    position: absolute;
+    bottom: 15vh;
+    left: 15vw;
+    font-family: "Cabin", serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30vw;
+}
+
+.sub_title {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.title.wide_title {
+    width: 100%;
+}
+
+.title {
+    font-size: 2.5em;
+    width: 75%;
+}
+
+.style_button {
+    background: none;
+    border: 2px solid white;
+    padding: 15px;
+    color: white;
+    font-weight: 700;
+    width: 30%;
+    margin-top: 3vh;
+}
+
+.style_footer {
+    display: flex;
+    justify-content: center;
+    font-size: 0.65em;
+    letter-spacing: -0.5px;
+    gap: 40px;
+    background-color: black;
+    color: white;
+    font-family: "Cabin", serif;
+    padding: 30px;
+    font-weight: 100;
+}
+
+.hover-fill {
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hover-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: white;
+    z-index: 0;
+    transition: height 0.3s ease, top 0.3s ease;
+}
+
+.hover-fill:hover::before {
+    height: 100%;
+    bottom: 0;
+    color: black;
+    top: auto;
+}
+
+.hover-fill:hover {
+    color: black;
+}
+
+.hover-fill span {
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1580px) {
+    #nav_items {
+        display: none;
+    }
+
+    .nav_bar {
+        height: 75px;
+    }
+
+    .nav_links {
+        display: grid;
+        width: 100%;
+        place-items: center;
+    }
+
+    .nav_links img {
+        width: 150px;
+    }
+
+    .menu {
+        width: 50vw;
+    }
+
+    #menu_items {
+        width: 50vw;
+    }
+
+    #shop {
+        display: none;
+    }
+
+    .screen_content {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding: 15px;
+    }
+}
