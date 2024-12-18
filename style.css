@@ -13,6 +13,10 @@ html {
 }
 
 
+body {
+    background-color: #000000;
+}
+
 .nav_bar {
     width: 100%;
     position: fixed;
@@ -230,6 +234,14 @@ html {
         display: none;
     }
 
+    .title {
+        font-size: 1.75em;
+    }
+    
+    .sub_title {
+        font-size: 1em;
+    }
+
     .nav_bar {
         height: 75px;
     }
@@ -254,6 +266,10 @@ html {
 
     #shop {
         display: none;
+    }
+
+    .style_button {
+        width: 30vw;
     }
 
     .screen_content {
